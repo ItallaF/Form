@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="uft-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/teste.css">
+<link rel="stylesheet" type="text/css" href="css/Normalize.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,400&family=Open+Sans:wght@300&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+	<title>Formulario</title>
+    <script src="js/brootrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+        <div class="container-fluid">
+        <form action="arquivo.ext" method="POST">
+            <table id="cab">
+                <tr><td> <h3 id="titulo">Ótima Escolha!</h3></td></tr>
+                <tr><td id="sub">Obrigado por comprar na RCHLO! Preencha seus dados para efetivar a compra.</td></tr>
+            </table>
+            <table style="border: 1px solid rgb(235, 235, 235);">
+            <tr id="cab1"><td id="titulo1">Sua Compra</td></tr>
+            <tr><td>
+				<img class="img-responsive" src="./Captura de tela 2022-02-27 153827.png" alt="camisa"></td></tr>
+            <tr><td id="titulo2">Produto:</td></tr>
+            <tr><td id="corpo">Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo</td></tr>
+            <tr><td id="titulo2">Cor:</td></tr>
+            <tr><td id="corpo">Branco</td></tr>
+            <tr><td id="titulo2">Tamanho:</td></tr>
+            <tr><td id="corpo">G</td></tr>
+            <tr><td id="titulo2">Preço:</td></tr>
+            <tr><td id="corpo">R$ 69,90</td></tr>
+            </table>
+        <table>
+            <tr><td id="titulo1">Dados Pessoais</td></tr>
+            <tr><td id="corpo">Nome Completo</td></tr>
+            <tr><td id="corpo"><input type="TEXT" name="Nome" size="50"></td></tr>
+            <tr><td id="corpo">E-mail</td></tr>
+            <tr><td id="corpo"><input type="TEXT" name="email" placeholder="email@exemplo.com" size="50"></td></tr>
+            <tr><td id="corpo">CPF
+            <tr><td id="corpo"><input type="TEXT" name="cpf" placeholder="000.000.000-00" size="50"></td></tr>
+            <tr><td id="corpo"><input type="checkbox" name="chec" value="sim">Quero receber a newsletter da RCHLO!</td></tr>
+            </td></tr>
+            <tr><td>
+            <tr><td id="titulo1">Cartão de Crédito</td></tr>
+            <tr><td id="corpo"> Numero - CVV</td></tr>
+            <tr><td id="corpo"><input type="TEXT" name="cvv" size="50"></td></tr>
+            <tr><td id="corpo"> Bandeira:</td></tr>
+                <tr><td id="corpo"><Select name="tipo">
+                <option>Selecione uma opção</option>
+                <option value="1">Visa</option>
+                <option value="2">Mastercard</option>
+                <option value="3">American Express</option>
+                <option value="4">Diners</option>
+                <option value="5">Elo</option>
+            </Select></td></tr>
+            <tr><td id="corpo">Validade</td></tr>
+            <tr><td id="corpo"><input type="date" name="date"></td></tr>
+            </td></tr>
+            <tr><td><input type="submit" name="enviar" class="botao" value="Confirmar Pedido">
+            <input type="reset" name="concelar" class="botao" value="Cancelar"></td></tr>
+            </table>
+        </form>
+        </div>
+    </body>
+    </html>
