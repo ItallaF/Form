@@ -1,6 +1,12 @@
 body{
     font-family: 'Work Sans', sans-serif;
 }
+h1{
+    text-align: center;
+    padding: 8px;
+    align-items: flex-start;
+    margin: 20px 0 20px 0;
+}
 
 .botao{
     color: rgb(255, 255, 255);
@@ -10,12 +16,6 @@ body{
     font-size: .9em;
     border-radius: 6px;
     border-color: #006effe8;
-}
-
-table{
-    width: 50%;
-    border-collapse: collapse;
-    border-radius: 3px;
 }
 form{
     display: flex;
@@ -27,6 +27,9 @@ form{
 }
 #cab{
     background-color:#edc1f831;
+}
+#corp{
+    background-color:#ffffff;
 }
 #sub{
     align-items: center;
@@ -44,14 +47,20 @@ form{
     padding: 8px;
     padding-top: 12px;
 }
-#titulo1{
-    font-family: 'Work Sans', sans-serif;
-    font-size: 25px;
+h5{
     font-weight: 650;
     text-align: left;
-    color: rgb(0, 0, 0);
     padding: 8px;
-    padding-top: 12px;
+    align-items: flex-start;
+    margin: 20px 0 20px 0;
+    
+}
+h4{
+    font-weight: 650;
+    text-align: left;
+    padding: 8px;
+    align-items: flex-start;
+    margin: 20px 0 20px 0;
 }
 #cab1{
     background-color:#edc1f831;
@@ -83,3 +92,19 @@ form{
     text-align: center;
     padding: 8px;
 }
+.container {
+    margin: 20px auto;
+    padding: 20px;
+}
+.panel.panel-default {
+    border-radius: 0;
+  }
+  
+  .padding {
+    padding: 40px;
+  }
+  
+  .no-padding {
+    padding: 0;
+    margin: 0;
+  }

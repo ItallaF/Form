@@ -15,55 +15,91 @@
     <script src="js/bootstrap.min.js"></script>
 	</head>
 	<body>
-        <div class="container-fluid">
-        <form action="arquivo.ext" method="POST">
-            <table id="cab">
-                <tr><td> <h3 id="titulo">Ótima Escolha!</h3></td></tr>
-                <tr><td id="sub">Obrigado por comprar na RCHLO! Preencha seus dados para efetivar a compra.</td></tr>
-            </table>
-            <table style="border: 1px solid rgb(235, 235, 235);">
-            <tr id="cab1"><td id="titulo1">Sua Compra</td></tr>
-            <tr><td>
-				<img class="img-responsive" src="./Captura de tela 2022-02-27 153827.png" alt="camisa"></td></tr>
-            <tr><td id="titulo2">Produto:</td></tr>
-            <tr><td id="corpo">Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo</td></tr>
-            <tr><td id="titulo2">Cor:</td></tr>
-            <tr><td id="corpo">Branco</td></tr>
-            <tr><td id="titulo2">Tamanho:</td></tr>
-            <tr><td id="corpo">G</td></tr>
-            <tr><td id="titulo2">Preço:</td></tr>
-            <tr><td id="corpo">R$ 69,90</td></tr>
-            </table>
-        <table>
-            <tr><td id="titulo1">Dados Pessoais</td></tr>
-            <tr><td id="corpo">Nome Completo</td></tr>
-            <tr><td id="corpo"><input type="TEXT" name="Nome" size="50"></td></tr>
-            <tr><td id="corpo">E-mail</td></tr>
-            <tr><td id="corpo"><input type="TEXT" name="email" placeholder="email@exemplo.com" size="50"></td></tr>
-            <tr><td id="corpo">CPF
-            <tr><td id="corpo"><input type="TEXT" name="cpf" placeholder="000.000.000-00" size="50"></td></tr>
-            <tr><td id="corpo"><input type="checkbox" name="chec" value="sim">Quero receber a newsletter da RCHLO!</td></tr>
-            </td></tr>
-            <tr><td>
-            <tr><td id="titulo1">Cartão de Crédito</td></tr>
-            <tr><td id="corpo"> Numero - CVV</td></tr>
-            <tr><td id="corpo"><input type="TEXT" name="cvv" size="50"></td></tr>
-            <tr><td id="corpo"> Bandeira:</td></tr>
-                <tr><td id="corpo"><Select name="tipo">
-                <option>Selecione uma opção</option>
-                <option value="1">Visa</option>
-                <option value="2">Mastercard</option>
-                <option value="3">American Express</option>
-                <option value="4">Diners</option>
-                <option value="5">Elo</option>
-            </Select></td></tr>
-            <tr><td id="corpo">Validade</td></tr>
-            <tr><td id="corpo"><input type="date" name="date"></td></tr>
-            </td></tr>
-            <tr><td><input type="submit" name="enviar" class="botao" value="Confirmar Pedido">
-            <input type="reset" name="concelar" class="botao" value="Cancelar"></td></tr>
-            </table>
-        </form>
-        </div>
+        <div id="wrapper" class="container">	
+            <header style="background-color:  rgb(235, 235, 235);">
+                <h1>Ótima Escolha!</h1>
+                <p id="sub">Obrigado por comprar na RCHLO! Preencha seus dados para efetivar a compra.</p>
+            </header>
+            <form data-toggle="validator" action="arquivo.ext" method="POST">
+                <div class="row">
+                    <div class="form-group col-sm">
+                        <div class="" id="cab" style="border: 1px solid rgb(235, 235, 235);">
+                            <h4 id="titulo1">Sua Compra</h4>
+                            <div style="background-color: rgb(255, 255, 255);">
+                                <img src="./Captura de tela 2022-02-27 153827.png" class="img-fluid" alt="camisa"><br>
+                                <h5>Produto:</h5>
+                                <p id="corpo">Camiseta Manga Curta Malha Tie Dye The Simpsons Branco Riachuelo</p>
+                                <h5>Cor:</h5>
+                                <p id="corpo">Branco</p>
+                                <h5>Tamanho:</h5>
+                                <p id="corpo">G</p>
+                                <h5>Preço:</h5>
+                                <p id="corpo">R$ 69,90</p>
+                                </div>
+                                </div>
+                            </div>
+                            
+                <div class="form-group col-sm has-feedback">
+                    <h4>Dados Pessoais</h4>
+                    <p id="corpo"><label for="nome"> Nome Completo</label>
+                    <input type="text" class="form-control" id="corpo" size="60" maxlength="200" required>
+                    <div class="help-block with-errors"></div>
+                </p>
+             
+                    <div class="form-group">
+                        <p id="corpo"><label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="corpo" placeholder="nome@exemplo.com" size="60" data-error="E-mail invalido, informe um e-mail correto." maxlength="300" required>
+                        <small id="corpo" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                        <div class="help-block with-errors"></div>
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <p id="corpo"><label for="cpf">CPF</label>
+                        <input type="text" class="form-control"  id="corpo" placeholder="000.000.000-00" size="60" data-minlength="14" maxlength="14" data-error="CPF invalido, informe um cpf correto." required>
+                        <div class="help-block with-errors"></div>
+                    </p>
+                    </div>
+
+                    <div class="form-group">
+                        <p id="corpo">
+                        <input type="checkbox" class="form-check-input" id="chec" data-error="Preencha este campo" required>
+                        <label class="form-check-label" for="exampleCheck1">Quero receber a newsletter da RCHLO!</label>
+                        <div class="help-block with-errors"></div>
+                    </p>
+                    </div>
+
+                <div class="form-group">            
+                    <input type="submit" name="enviar" class="botao" value="Confirmar Pedido"><p></p>
+                    <input type="reset" name="concelar" class="botao" value="Cancelar"></div>
+                </div>
+
+            <div class="col-sm">
+                <div class="form-group">
+                    <h4>Cartão de Crédito</h4>
+                    <p id="corpo"> <label for="cvv">Numero - CVV</label>
+                    <input class="form-control" type="number" id="corpo" size="60" data-minlength="3" maxlength="3" data-error="CVV invalido, Verifique se está correto." required>
+                    <div class="help-block with-errors"></div>
+                </p>
+                </div>
+                <div class="form-group">
+                    <label class="my-1 mr-2" for="band">Bandeira:</label>
+                    <Select class="custom-select my-1 mr-sm-2" name="tipo" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="1">Visa</option>
+                    <option value="2">Mastercard</option>
+                    <option value="3">American Express</option>
+                    <option value="4">Diners</option>
+                    <option value="5">Elo</option>
+                    </Select><div class="help-block with-errors"></div></div>
+                <div class="form-group">
+                    <label class="my-1 mr-2" for="val">Validade</label>
+                    <input class="custom-date my-1 mr-sm-2" type="date" name="date" required>
+                    <div class="help-block with-errors"></div>
+                    </div></div>
+            </form>
+        </div></div>
+    </div>
+    <script src="js/validator.min.js"></script>
     </body>
     </html>
