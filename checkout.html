@@ -42,7 +42,7 @@
                 <div class="form-group col-sm has-feedback">
                     <h4>Dados Pessoais</h4>
                     <p id="corpo"><label for="nome"> Nome Completo</label>
-                    <input type="text" class="form-control" id="corpo" size="60" maxlength="200" required>
+                    <input type="text" class="form-control" id="corpo" size="60" maxlength="200"  data-error="Campo obrigatório" required>
                     <div class="help-block with-errors"></div>
                 </p>
              
@@ -63,7 +63,7 @@
 
                     <div class="form-group">
                         <p id="corpo">
-                        <input type="checkbox" class="form-check-input" id="chec" data-error="Preencha este campo" required>
+                        <input type="checkbox" class="form-check-input" id="chec" data-error="Campo obrigatório" required>
                         <label class="form-check-label" for="exampleCheck1">Quero receber a newsletter da RCHLO!</label>
                         <div class="help-block with-errors"></div>
                     </p>
@@ -78,7 +78,7 @@
                 <div class="form-group">
                     <h4>Cartão de Crédito</h4>
                     <p id="corpo"> <label for="cvv">Numero - CVV</label>
-                    <input class="form-control" type="number" id="corpo" size="60" data-minlength="3" maxlength="3" data-error="CVV invalido, Verifique se está correto." required>
+                    <input class="form-control" type="number" id="corpo" size="60" data-minlength="3" maxlength="3" data-error="Padrão inválido para o CVV." required>
                     <div class="help-block with-errors"></div>
                 </p>
                 </div>
@@ -94,7 +94,7 @@
                     </Select><div class="help-block with-errors"></div></div>
                 <div class="form-group">
                     <label class="my-1 mr-2" for="val">Validade</label>
-                    <input class="custom-date my-1 mr-sm-2" type="date" name="date" required>
+                    <input class="custom-date my-1 mr-sm-2" type="date" name="date" data-error="Campo obrigatório" required>
                     <div class="help-block with-errors"></div>
                     </div></div>
             </form>
