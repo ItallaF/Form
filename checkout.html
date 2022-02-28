@@ -13,6 +13,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/preco.js"></script>
 	</head>
 	<body>
         <div id="wrapper" class="container">	
@@ -23,7 +24,7 @@
             <form data-toggle="validator" action="arquivo.ext" method="POST">
                 <div class="row">
                     <div class="form-group col-sm">
-                        <div class="" id="cab" style="border: 1px solid rgb(235, 235, 235);">
+                        <div id="cab" style="border: 1px solid rgb(235, 235, 235);">
                             <h4 id="titulo1">Sua Compra</h4>
                             <div style="background-color: rgb(255, 255, 255);">
                                 <img src="./Captura de tela 2022-02-27 153827.png" class="img-fluid" alt="camisa"><br>
@@ -40,6 +41,15 @@
                             </div>
                             
                 <div class="form-group col-sm has-feedback">
+                    <div class="form-group" style="border: 1px solid rgb(235, 235, 235);">
+                        <p id="corpo"> <label for="quant">Quantidade</label>
+                        <input class="form-control" type="number" min="1" max="99" size="60" name="qnt" id="qnt" value="1" />
+                        <input class="form-control" type="hidden" name="valor_unitario" id="valor_unitario" placeholder="69,90" value="69.90" readonly="readonly"/>
+                        <p id="corpo"><label for="total">Total</label>
+                        <input class="form-control" type="text" name="total" id="total" placeholder="69,90" readonly="readonly" />
+                    </p>
+                    </div>
+
                     <h4>Dados Pessoais</h4>
                     <p id="corpo"><label for="nome"> Nome Completo</label>
                     <input type="text" class="form-control" id="corpo" size="60" maxlength="200"  data-error="Campo obrigatório" required>
@@ -101,5 +111,38 @@
         </div></div>
     </div>
     <script src="js/validator.min.js"></script>
+    <script type="text/javascript">
+        function id(el) {
+          return document.getElementById( el );
+        }
+        function total( qnt, un ) {
+          return parseFloat(qnt.replace(',', '.'), 10) * parseFloat(un.replace(',', '.'), 10);
+        }
+        window.onload = function() {
+          id('qnt').addEventListener('keyup', function() {
+            var result = total( this.value , id('valor_unitario').value );
+            id('total').value = String(result.toFixed(2)).formatMoney();
+          });
+        
+          id('valor_unitario').addEventListener('keyup', function(){
+            var result = total( id('qnt').value , this.value );
+            id('total').value = String(result.toFixed(2)).formatMoney();
+          });
+        }
+        
+        String.prototype.formatMoney = function() {
+          var v = this;
+        
+          if(v.indexOf('.') === -1) {
+            v = v.replace(/([\d]+)/, "$1,00");
+          }
+        
+          v = v.replace(/([\d]+)\.([\d]{1})$/, "$1,$20");
+          v = v.replace(/([\d]+)\.([\d]{2})$/, "$1,$2");
+          v = v.replace(/([\d]+)([\d]{3}),([\d]{2})$/, "$1.$2,$3");
+        
+          return v;
+        };
+        </script>
     </body>
     </html>
