@@ -1,0 +1,85 @@
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+.botao{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #006effe8;
+    font-size: .9em;
+    border-radius: 6px;
+    border-color: #006effe8;
+}
+
+table{
+    width: 50%;
+    border-collapse: collapse;
+    border-radius: 3px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+#cab{
+    background-color:#edc1f831;
+}
+#sub{
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+#titulo{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 650;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    padding-top: 12px;
+}
+#titulo1{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 650;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    padding-top: 12px;
+}
+#cab1{
+    background-color:#edc1f831;
+    border: 1px solid rgb(235, 235, 235);
+}
+#titulo2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 650;
+    align-items: flex-start;
+    text-align: left;
+    padding: 8px;
+}
+#corpo{
+    font-family: 'Open Sans', sans-serif;
+    align-items: flex-start;
+    text-align: left;
+    padding: 8px;
+}
+#tipo{
+    font-family: 'Work Sans', sans-serif;
+    align-items: flex-start;
+    text-align: justify;
+    padding: 8px;
+    width: 20%;
+}
+#bot{
+    font-family: 'Work Sans', sans-serif;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+}
